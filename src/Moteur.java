@@ -17,9 +17,9 @@ public class Moteur {
     }
     public int utiliser(int carburantUtilise, String v){
         if (this.conso > 50){
-            panne(v);
+           System.out.println(panne(v));
         }
-        if (this.carburant < carburantUtilise){
+        if (getCarburant() < carburantUtilise){
           System.out.println(faireLePlein(100, v));
         }
         else {
@@ -42,13 +42,13 @@ public class Moteur {
     }
 
     public String faireLePlein(int plein, String s){
-        this.carburant += plein;
+        setCarburant(this.carburant + plein);
         this.conso = 0;
         return s + " a reçu " + plein + " litres dans le réservoir";
     }
 
     public String panne(String s){
-        return "-------------------------------------------------------------------" +"\n" + s + " vient de tomber en panne " +"\n" +" ---------------------------------------------------------------------";
+        return "-------------------------------------------------------------------" +"\n" + "La " + s + " vient de tomber en panne " +"\n" +" ---------------------------------------------------------------------";
     }
 
 }
