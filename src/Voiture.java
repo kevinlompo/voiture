@@ -6,7 +6,6 @@ class Voiture extends VehiculeMotorise {
     public void rouler() {
         super.demarrer();
         for (int i = 0; i < 7; i++) {
-            String str = modele;
             super.moteur.utiliser(10, modele);
         }
         super.arreter();

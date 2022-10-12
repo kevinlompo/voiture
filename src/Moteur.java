@@ -1,7 +1,6 @@
 public class Moteur {
     int carburant;
     int conso = 0;
-
     public Moteur(int carburant){
         this.carburant = carburant;
     }
@@ -40,13 +39,11 @@ public class Moteur {
     public void setCarburant(int carburant){
         this.carburant = carburant;
     }
-
     public String faireLePlein(int plein, String s){
         setCarburant(this.carburant + plein);
         this.conso = 0;
         return s + " a reçu " + plein + " litres dans le réservoir";
     }
-
     public String panne(String s){
         return "-------------------------------------------------------------------" +"\n" + "La " + s + " vient de tomber en panne " +"\n" +" ---------------------------------------------------------------------";
     }
